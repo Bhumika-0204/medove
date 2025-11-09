@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #000; /* Changed to black */
+    line-height: 1.6;
+}
+
+.explore {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    animation: fadeIn 1s ease-in;
+}
+
+h1 { 
+    font-weight: 900;
+    font-size: 3.5rem;
+    margin: 2rem 0;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    position: relative;
+    color: #000; /* Changed to black */
+}
+
+h1::after {
+    content: '';
+    display: block;
+    width: 150px;
+    height: 4px;
+    background: #03989E; /* Keep brand color only for underline */
+    margin: 1rem auto;
+    border-radius: 2px;
+}
+
+h3 {
+    font-style: italic;
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+    color: #8fd5d9;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.explore p {
+    font-size: 1.1rem;
+    margin: 1rem 0;
+    color: black;
+    line-height: 1.8;
+}
+
+.section {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 15px;
+    margin: 2rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.section h3 {
+    color: #03989E;  /* Keep heading color */
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.section p {
+    color: #000;  /* Changed to black */
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.section ul, 
+.section ol,
+.section li {
+    color: #000;  /* Changed to black */
+}
+
+.section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .explore {
+        padding: 2rem 1rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        color: #03989E;  /* Keep heading color */
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    .section h3 {
+        font-size: 1.5rem;
+    }
+
+    .section {
+        padding: 1.5rem;
+    }
+}
+
+/* List Styling */
+ul, ol {
+    margin: 1rem 0;
+    padding-left: 2rem;
+    color: #e6f7f8;
+}
+
+li {
+    margin: 0.5rem 0;
+}
