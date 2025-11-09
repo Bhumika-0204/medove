@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Telemedicine - Hospital Management</title>
+    <link rel="stylesheet" href="style/telemedicine.css">
+    <link rel="stylesheet" href="style/style.css">
+    <style>
+        .cart-section {
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+        }
+        .cart-section h2 {
+            margin-bottom: 10px;
+        }
+        .cart-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .cart-table th, .cart-table td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        .cart-total {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="main">
+        <div class="nav">
+            <h2><a href="index.html">Medove</a></h2>
+            <div class="navp">
+                <h4><a href="../connect.html">Connect with doctor</a></h4>
+                <h4><a href="../appointment.html">Book Appointment</a></h4>
+                <h4><a href="../telemedicine.html">Order Medicines</a></h4>
+                <h4><a href="../terms.html">Privacy</a></h4>
+            </div>
+        </div>
+    </div> 
+
+    <!-- Medicines Section -->
+    <section id="track">
+        <div class="container">
+            <div class="section-header">
+                <h2>Medicines Inventory</h2>
+            </div>
+
+            <table class="inventory-table">
+                <thead>
+                    <tr>
+                        <th>Medicine Name</th>
+                        <th>type</th>
+                        <th>Expiry Date</th>
+                        <th>Price (₹)</th>
+                        <th>Dosage</th>
+                        <th>Quantity</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Paracetamol</td>
+                        <td>Pain Reliever</td>
+                        <td>2027-12-31</td>
+                        <td>100</td>
+                        <td>
+                            <select class="dosage-select">
+                                <option value="500mg">500mg</option>
+                                <option value="250mg">250mg</option>
+                            </select>
+                        </td>
+                        <td><input type="number" class="quantity" data-medicine="Paracetamol" data-price="100" min="1" max="100" value="1"></td>
+                        <td><button class="add-to-cart" data-medicine="Paracetamol" data-price="100">Add to Cart</button></td>
+                    </tr>
+                    <tr>
+                        <td>Aspirin</td>
+                        <td>Pain Reliever</td>
+                        <td>2026-12-31</td>
+                        <td>100</td>
+                        <td>
+                            <select class="dosage-select">
+                                <option value="150mg">150mg</option>
+                                <option value="10mg">10mg</option>
+                            </select>
+                        </td>
+                        <td><input type="number" class="quantity" data-medicine="Paracetamol" data-price="100" min="1" max="100" value="1"></td>
+                        <td><button class="add-to-cart" data-medicine="Paracetamol" data-price="100">Add to Cart</button></td>
+                    </tr>
+                    <tr>
+                        <td>Cetrizine</td>
+                        <td>Antihistamine</td>
+                        <td>2026-12-31</td>
+                        <td>100</td>
+                        <td>
+                            <select class="dosage-select">
+                                <option value="10mg">10mg</option>
+                                <option value="5mg">5mg</option>
+                            </select>
+                        </td>
+                        <td><input type="number" class="quantity" data-medicine="Paracetamol" data-price="100" min="1" max="100" value="1"></td>
+                        <td><button class="add-to-cart" data-medicine="Paracetamol" data-price="100">Add to Cart</button></td>
+                    </tr>
+                    <tr>
+                        <td>Omeprazole</td>
+                        <td>Acid Reducer</td>
+                        <td>2025-12-31</td>
+                        <td>100</td>
+                        <td>
+                            <select class="dosage-select">
+                                <option value="40mg">40mg</option>
+                                <option value="20mg">20mg</option>
+                                <option value="10mg">10mg</option>
+
+                            </select>
+                        </td>
+                        <td><input type="number" class="quantity" data-medicine="Paracetamol" data-price="100" min="1" max="100" value="1"></td>
+                        <td><button class="add-to-cart" data-medicine="Paracetamol" data-price="100">Add to Cart</button></td>
+                    </tr>
+                    <tr>
+                        <td>Ibuprofen</td>
+                        <td>Pain Reliever</td>
+                        <td>2026-12-31</td>
+                        <td>100</td>
+                        <td>
+                            <select class="dosage-select">
+                                <option value="600mg">600mg</option>
+                                <option value="400mg">400mg</option>
+                                <option value="200mg">200mg</option>
+
+                            </select>
+                        </td>
+                        <td><input type="number" class="quantity" data-medicine="Paracetamol" data-price="100" min="1" max="100" value="1"></td>
+                        <td><button class="add-to-cart" data-medicine="Paracetamol" data-price="100">Add to Cart</button></td>
+                    </tr>
+                    <tr>
+                        <td>Metformin</td>
+                        <td>Antidiabetic</td>
+                        <td>2026-12-31</td>
+                        <td>100</td>
+                        <td>
+                            <select class="dosage-select">
+                                <option value="500mg">500mg</option>
+                                <option value="850mg">850mg</option>
+                               
+                            </select>
+                        </td>
+                        <td><input type="number" class="quantity" data-medicine="Paracetamol" data-price="100" min="1" max="100" value="1"></td>
+                        <td><button class="add-to-cart" data-medicine="Paracetamol" data-price="100">Add to Cart</button></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Cart Section -->
+    <section class="cart-section">
+        <h2>Your Cart</h2>
+        <table class="cart-table">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Price (₹)</th>
+                    <th>Quantity</th>
+                    <th>Total (₹)</th>
+                </tr>
+            </thead>
+            <tbody id="cart-items">
+                <tr>
+                    <td colspan="4">Your cart is empty.</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="cart-total" id="cart-total"></div>
+    </section>
+
+    <script>
+        const cart = [];
+        const cartItemsContainer = document.getElementById('cart-items');
+        const cartTotalContainer = document.getElementById('cart-total');
+
+        function updateCart() {
+            if (cart.length === 0) {
+                cartItemsContainer.innerHTML = '<tr><td colspan="4">Your cart is empty.</td></tr>';
+                cartTotalContainer.textContent = '';
+                return;
+            }
+
+            cartItemsContainer.innerHTML = '';
+            let total = 0;
+
+            cart.forEach(item => {
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${item.name}</td>
+                    <td>${item.price}</td>
+                    <td>${item.quantity}</td>
+                    <td>${itemTotal}</td>
+                `;
+                cartItemsContainer.appendChild(row);
+            });
+
+            cartTotalContainer.textContent = `Total: ₹${total}`;
+        }
+
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', () => {
+                const name = button.dataset.medicine || button.dataset.equipment;
+                const price = parseInt(button.dataset.price, 10);
+                const quantityInput = document.querySelector(`.quantity[data-medicine="${name}"]`);
+                const quantity = parseInt(quantityInput.value, 10);
+
+                if (!quantity || quantity <= 0) {
+                    alert('Please enter a valid quantity.');
+                    return;
+                }
+
+                const existingItem = cart.find(item => item.name === name);
+                if (existingItem) {
+                    existingItem.quantity += quantity;
+                } else {
+                    cart.push({ name, price, quantity });
+                }
+
+                updateCart();
+            });
+        });
+    </script>
+</body>
+</html>

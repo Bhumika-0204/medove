@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  background-color: #f8f9fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #000; /* Changed to black */
+  line-height: 1.6;
+}
+
+body {
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/aiims-hero.jpg');
+  background-size: cover;
+  color: white;
+  padding: 100px 0;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Sections */
+section {
+  padding: 40px 20px;
+  margin: 20px 0;
+  background-color: #f8f9fa;
+  border-radius: 0;  /* Remove border radius */
+  box-shadow: none;  /* Remove shadow */
+}
+
+h2 {
+  text-align: center;
+  color: #0056b3;
+  margin-bottom: 20px;
+}
+
+p {
+  text-align: center;
+  font-size: 1.1em;
+}
+
+/* About Section */
+.about-container {
+  display: flex; /* Aligns items side by side */
+  align-items: center; /* Vertically centers items */
+  justify-content: space-between; /* Adds space between image and points */
+  gap: 20px; /* Adds space between the image and the text */
+}
+
+/* Specialties Section */
+.specialty-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 20px;
+}
+
+.specialty-card {
+  background: #e3f2fd;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.specialty-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Facilities Section */
+.facilities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  margin: 20px 40px;
+  background-color: #f8f9fa;
+  box-shadow: none;
+  border: none;     
+}
+
+.facility {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Contact Section */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 40px;
+  background-color: #f8f9fa;
+  margin: 20px 40px;
+  box-shadow: none;
+  border: none;     
+}
+
+.contact-info {
+  text-align: center;
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+.hospital-photo {
+  max-width: 50%;
+  height: auto;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+}
+
+.about-points {
+  max-width: 45%;
+  font-size: 1.1em;
+}
+
+.about-points ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.about-points li {
+  margin-bottom: 10px;
+}
+
+/* Services */
+#services .service-box {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.service-item {
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  width: 30%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.service-item h3 {
+  color: #0056b3;
+  margin-bottom: 15px;
+}
+
+/* Ratings */
+#ratings .ratings-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+}
+
+.rating, .review {
+  width: 45%;
+  text-align: center;
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.stars {
+  font-size: 24px;
+  color: gold;
+}
+
+/* Insurance Section */
+#insurance .insurance-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 20px;
+}
+
+.insurance-item {
+  background-color: #e3f2fd;
+  padding: 20px;
+  border-radius: 12px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.insurance-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+
+/* Header */
+.header-title {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.header-title h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.header-title p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Two Column Layout */
+.info-container {
+    display: flex;
+    gap: 40px;
+    padding: 40px;
+    margin: 0 40px;
+    background-color: #f8f9fa;
+}
+
+.hospital-image {
+    flex: 1;  /* Equal flex */
+    max-width: 50%;  /* Force 50% width */
+}
+
+.hospital-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.hospital-details {
+    flex: 1;  /* Equal flex */
+    max-width: 50%;  /* Force 50% width */
+}
+
+.info-table {
+    width: 100%;
+    height: 100%;
+    background-color: #e3f2fd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Hospital Description */
+.hospital-description {
+    padding: 20px;
+    background-color: #f8f9fa;
+    margin: 20px 40px;
+    box-shadow: none;  /* Remove shadows */
+    border: none;      /* Remove borders */
+}
+

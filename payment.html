@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <title>Medove</title>
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/payment.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"rel="stylesheet"/>
+</head>
+
+<body>
+<!--  header    -->
+<div class="main">
+  <div class="nav">
+      <h2><a href="index.html">Medove </a></h2>
+      <div class="navp">
+          <h4><a href="connect.html">Connect with doctor</a></h4>
+          <h4><a href="appointment.html">Book Appointment</a></h4>
+          <h4><a href="../telemedicine.html">Order Medicines</a></h4>
+          <h4><a href="terms.html"> Privacy</a> </h4>
+          <i class="ri-menu-line"></i>
+      </div>
+</div>
+
+<!-- Payment gateway -->
+<div class="payment-wrapper">
+    <div class="payment-container">
+        <div class="payment-header">
+            <h2>Payment Details</h2>
+            <div class="amount-display">
+                <span>Consultation Fee</span>
+                <span class="amount">₹500</span>
+            </div>
+        </div>
+
+        <div class="payment-form">
+            <div class="payment-methods">
+                <label class="method">
+                    <input type="radio" name="payment" value="card" checked onchange="togglePaymentForm('card')">
+                    <i class="ri-bank-card-line"></i>
+                    <span>Card Payment</span>
+                </label>
+                <label class="method">
+                    <input type="radio" name="payment" value="upi" onchange="togglePaymentForm('upi')">
+                    <i class="ri-smartphone-line"></i>
+                    <span>UPI</span>
+                </label>
+            </div>
+
+            <!-- Card Payment Form -->
+            <form id="cardForm" onsubmit="return redirectToWait(event)">
+                <div class="form-group1">
+                    <label>Card Number</label>
+                    <input type="text" placeholder="1234 5678 9012 3456" maxlength="16">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Expiry Date</label>
+                        <input type="text" placeholder="MM/YY">
+                    </div>
+                    <div class="form-group">
+                        <label>CVV</label>
+                        <input type="password" placeholder="***" maxlength="3">
+                    </div>
+                </div>
+                <button type="submit" class="pay-btn">Pay ₹500</button>
+            </form>
+
+            <!-- UPI Payment Form -->
+            <form id="upiForm" style="display: none;" onsubmit="return redirectToWait(event)">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label>UPI ID</label>
+                    <input type="text" placeholder="yourname@upi">
+                </div>
+                <button type="submit" class="pay-btn">Pay ₹500</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!--   footer     -->
+<div class="footer">
+  <div class="footp1">
+    <a href="payment.html">  Back to Top</a>
+  </div>
+
+  <div class="footp2">
+    <ul>
+      <p>Get to Know Us</p> 
+      <a href="explore.html">About Us</a>
+      <a>Careers</a>
+      <a>Press Releases</a>
+      <a>Technologies</a>
+    </ul>
+    <ul>
+        <p>Connect with Us</p> 
+        <a>Facebook</a>
+        <a>Twitter</a>
+        <a>Instagram</a>
+    </ul>
+    <ul>
+      <p>Top Departments</p> 
+      <a>Primary First Aid</a>
+      <a>Cardiovascular Care</a>
+      <a>Physiotherapy</a>
+      <a>Dermatology</a>
+      <a>Neurology</a>
+    </ul>
+    <ul>
+      <p>Do you have any recommendation?</p> 
+      <a>List a Hospital</a>
+      <a>Become our EHR partner</a>
+      <a>Feedback</a>
+      <a>Contribute</a>
+      <a>Donations</a>
+      <a>Learn More about Medove</a>
+      
+    </ul>
+  </div>
+ 
+  <div class="footp3">
+    <p>The content provided here and elsewhere on the Medove site is provided for general informational purposes only.It is not intended
+      as, Medove does not provide medical advice,diagnosis or treatment.Always contact your healthcare provider directly with any questions
+      you may have regarding your health or specific medical advice.
+    </p>
+  </div>
+
+  <div class="footp4">
+    <div class="copyright">
+      © 2025, Medove.com, Inc.
+    </div>
+    <div class="pages">
+      <a>Conditions of use</a>
+      <a>Privacy</a>
+      <a>Terms</a>
+    </div>
+  </div>
+  
+ 
+</div>
+</div>
+<script>
+    function togglePaymentForm(type) {
+    const cardForm = document.getElementById('cardForm');
+    const upiForm = document.getElementById('upiForm');
+    
+    if (type === 'card') {
+        cardForm.style.display = 'block';
+        upiForm.style.display = 'none';
+    } else {
+        cardForm.style.display = 'none';
+        upiForm.style.display = 'block';
+    }
+}
+
+    function redirectToWait(event) {
+        event.preventDefault();
+        window.location.href = 'wait.html';
+        return false;
+    }
+</script>
+</body>
+</html>

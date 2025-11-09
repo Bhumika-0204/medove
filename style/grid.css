@@ -1,0 +1,164 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:#f8f9fa;
+}
+
+header {
+    color: black;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 0;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 0;
+    background-color: none;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;
+    padding: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.Hospital-card {
+    background-color: #e3f2fd; 
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    text-align: center;
+    padding: 25px;
+    min-height: 400px;
+    border: 1px solid #e0e0e0;
+}
+
+.Hospital-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    background-color: #d4ebff; 
+}
+
+.Hospital-card img {
+    width: 300px; 
+    height: 200px; 
+    object-fit: cover; 
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+.Hospital-card:hover img {
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.Hospital-info {
+    text-align: left;
+    padding: 20px;
+}
+
+.Hospital-info h2 {
+    margin: 0;
+    font-size: 1.6rem;
+    color: #2a3d66;
+}
+
+.Hospital-info p {
+    text-align: left;
+    margin: 10px 0;
+    color: #555;
+}
+
+.Hospital-info .rating{
+    font-weight: bold;
+    color: #2a3d66;
+}
+
+.Hospital-info .specialty {
+    color: rgb(132, 188, 206);
+    font-style: italic;
+}
+
+.Hospital-info .insurance{
+    margin-top: 10px;
+}
+
+/*footer {
+    background-color: #2a3d66;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 50%;
+    bottom: 10px;
+    align-self:self-end
+  }
+    /*Header*/
+
+*{
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  border: border-box;
+
+}
+.main{
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.nav{
+  height: 150px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navp{
+  display: flex;
+  gap: 4vw;
+  align-items: center;
+}
+.nav i{
+  font-size: 2vw;
+  display: none;
+}
+.nav h2{
+  font-size: 1.5vw;
+  font-weight: 800;
+  padding-left: 4vw;
+}
+.nav h4{
+  font-size: 1vw;
+  padding-right: 3vw;
+}
+.main a{
+  text-decoration: none;
+  color: rgba(0,0,0,0.8);
+}
+
+@media (max-width: 1200px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}

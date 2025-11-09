@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processing Payment - Medove</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/wait.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="wait-container">
+        <div class="process-card">
+            <div class="loader"></div>
+            <h2>Processing Payment</h2>
+            <p>Please do not close this window</p>
+            <div class="amount">₹500</div>
+        </div>
+    </div>
+    <script>
+        setTimeout(() => {
+            window.location.href = "success.html";
+        }, 3000);
+    </script>
+   
+</body>
+</html>
